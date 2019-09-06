@@ -1,1 +1,1 @@
-Submissions to lab assignments of the course CSO351 aka Computer Graphics
+Code repository of Computer Graphics class 2019
