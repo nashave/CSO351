@@ -1,1 +1,1 @@
-Code repository of Computer Graphics class 2019
+Code repository of Computer Graphics class CSO351
