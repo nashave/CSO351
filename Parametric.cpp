@@ -7,21 +7,21 @@ int xc,yc,x,y,r;
 void Init()
 {
     //glClearColor(1.0,1.0,1.0,0); //clear color-black
-    glColor3f(0.0,255,0.0); 
+    glColor3f(0.0,255,200); 
     glMatrixMode(GL_PROJECTION);
-    gluOrtho2D(0 , 500 , 0 , 500);
+    gluOrtho2D(0 , 1500 , 0 , 1500);
 }
 
 void setPixel(int x,int y)
 {
-    glBegin(GL_POINTS);
+    glBegin(GL_2D_POINTS);
     glVertex2i(x,y);
     glEnd();
 }
 
 void parametric()
 {
-    glClear (GL_COLOR_BUFFER_BIT);
+    glClear (GL_COLOR_BUFFER_BIT_BUFFER);
     double theta = 0;
     double delta = 0.01;
     while(theta < 2*3.14)
@@ -39,8 +39,8 @@ int main(int argc,char ** argv)
     cin>>r;
     glutInit(&argc, argv);
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize (500,500);
-    glutInitWindowPosition (100, 150);
+    glutInitWindowSize (1500,1500);
+    glutInitWindowPosition (1100, 1150);
     glutCreateWindow ("Parametric method output.: ");
     Init();
     glutDisplayFunc(parametric);
